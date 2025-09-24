@@ -6,11 +6,11 @@
 		</script>
 
 		<style>
-			table, th, td {
+			table, th, td, caption{
 				border: 1px black solid;
 				padding: 3px;
 			}
-			table {
+			table{
 				margin: 0 auto;
 				border-spacing: 5px;
 			}
@@ -50,19 +50,19 @@
 			&lt;/body&gt;
 		&lt;/html&gt;</pre>
 		<p>Now you know the basics of Vim and what it can hep you do. This guide is a great starting point, but if you want to go deeper and learn how to navigate and use Vim with greater ease, type <kbd>vimtutor</kbd> into the terminal or look up vim commands in your browser.</p> 
-		<table>
-			<caption>Extra Vim Commands</caption>
+			<table>
+				<caption>Extra Vim Commands</caption>
 			<tr>
-				<th>Navigation Commands</th>
-				<th>Use</th>
+				<th colspan="3">Use</th>
 			</tr>
 			<tr>
+				<th rowspan="8">Navigation</th>
 				<td><kbd>w</kbd></td>
 				<td>Jumps forward to the start of a word</td>
 			</tr>
 			<tr>
 				<td><kbd>b</kbd></td>
-				<td>Jumps backwards to the start of a word</td>	
+				<td>Jumps backwards to the start of a word</td>
 			</tr>
 			<tr>
 				<td><kbd>0</kbd></td>
@@ -88,11 +88,8 @@
 				<td><kbd>%</kbd></td>
 				<td>Used to move to the matching character: (), {}, []</td>
 			</tr>
-		        <tr>
-                                <th>Editing Commands</th>
-                                <th>Use</th>
-		        </tr>
 			<tr>
+				<th rowspan="3">Editing</th>
 				<td><kbd>r</kbd></td>
 				<td>Replaces a single character</td>
 			</tr>
@@ -105,12 +102,9 @@
 				<td>Repeats the last command used</td>
 			</tr>	
 			<tr>
-				<th>Insert Mode Commands</th>
-				<th>Use</th>
-			</tr>	
-			<tr>
+				<th rowspan="4">Insert Mode</th>
 				<td><kbd>I</kbd></td>
-				<td>Insert at the beginning of the line</td>
+				<td>Insert at the beginning of a line</td>
 			</tr>
 			<tr>
 				<td><kbd>A</kbd></td>
@@ -124,13 +118,8 @@
 				<td><kbd>O</kbd></td>
 				<td>Open a new line above the current line and append</td>
 			</tr>
-
-			
 			<tr>
-				<th>Visual Commands</th>
-				<th>Use</th>
-			</tr>
-			<tr>
+				<th rowspan="5">Visual Mode</th>
 				<td><kbd>v</kbd></td>
 				<td>Enters visual mode</td>
 			</tr>
