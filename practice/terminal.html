@@ -2,15 +2,20 @@
 <html lang ="en">
 	<head>
 		<title>Tutorial on Vim</title>
-<style>
-table, th, td {
-border: 1px black solid;
-padding: 3px;
-}
-table {
-margin: 0 auto;
-}
-</style>
+		<style>
+			table, th, td {
+				border: 1px black solid;
+				padding: 3px;
+			}
+			table {
+				margin: 0 auto;
+				border-spacing: 5px;
+			}
+			th, td {
+				padding: 3px;
+				background-color: SeaShell;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>The Basics of Vim</h1>
@@ -115,7 +120,33 @@ margin: 0 auto;
 			<tr>
 				<td><kbd>O</kbd></td>
 				<td>Open a new line above the current line and append</td>
-			</tr>	
+			</tr>
+
+			
+			<tr>
+				<th>Visual Commands</th>
+				<th>Use</th>
+			</tr>
+			<tr>
+				<td><kbd>v</kbd></td>
+				<td>Enters visual mode</td>
+			</tr>
+			<tr>
+				<td><kbd>y</kbd></td>
+				<td>Copy(yank) marked text</td>
+			</tr>
+ 			<tr>
+				<td><kbd>p</kbd></td>
+				<td>Paste text after your cursor</td>
+			</tr>
+ 			<tr>
+				<td><kbd>u</kbd></td>
+				<td>Replaces text with lowercase</td>
+			</tr>
+			<tr>
+				<td><kbd>U</kbd></td>
+				<td>Replaces text with uppercase</td>
+			</tr>
 		</table>
 	</body>
 </html>
