@@ -1,0 +1,6 @@
+table, th, td {
+	border: black 2px solid;
+	border-collapse: collapse;
+	padding: 2px;
+	margin: auto;
+}
