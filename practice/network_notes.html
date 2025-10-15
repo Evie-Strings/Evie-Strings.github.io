@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notes on Network</title>
+		<style>
+			table, th, td {
+				border: 2px black solid;
+				padding: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<dl>
+			<dt>Protocol</dt>
+			<dd>The set of rules that dictate how information must be formatted.</dd>
+
+			<dt>Packet</dt>
+			<dd>A tiny piece of information broken from the larger message. One message might contain millions of packets.</dd>
+
+			<dt>Header</dt>
+			<dd>Information about a packet. To, from, order, etc.</dd>
+
+			<dt>Payload</dt>
+			<dd>The actual message contained in a set of packets.</dd>
+
+			<dt>Router</dt>
+			<dd>A place that many packets from different computers will travel through.</dd>
+
+			<dt>Routing Table</dt>
+			<dd>A table that stores the location of routers based on their IP addresses.</dd>
+		</dl>
+		<table>
+			<caption>Different Problems and Solutions that we encountered during our simulation</caption>
+			<tr>
+				<th>Problem</th>
+				<th>Solution</th>
+			</tr>
+			<tr>
+				<td>We didn't know where different locations were</td>
+				<td>Sending "Where are you?" messages</td>
+			</tr>
+			<tr>
+				<td>The "routers" were getting overwhelmed with packets</td>
+				<td>Making a rule that a packet could only be passed every 30 seconds</td>
+			</tr>
+			<tr>
+				<td>Not knowing who to return the message to</td>
+				<td>Writing our network number and the network number of the person who was supposed to recieve it</td>
+		</table>
+	</body>
+</html>
