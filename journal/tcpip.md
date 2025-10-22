@@ -11,11 +11,13 @@ Examples of applications:
 
 ## Transport
 
-Two modes, one that takes longer and retains the full message and one that doesn't take as long but might lose some parts along the way.
+TCP - Reliable, data is correct and complete on arrival
+
+UDP - Fast, not necessarily accurate, useful for live streams and online games
 
 ## Internet
 
-
+Gives each device an IP address and sends packages to their destinations.
 
 ## Link
 
