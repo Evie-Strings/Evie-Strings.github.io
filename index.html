@@ -6,6 +6,32 @@
 		<script src="../js/validate.js">
 
 		</script>
+		<style>
+			.buttondiv {
+			display: grid;
+			grid-template-columns: 25% 25% 25% 25%;
+			}
+
+			.empty {
+			border: none;
+			background-color: white;
+			color: white;
+			padding: 15px 30px;
+			}
+			.links {
+			border: none;
+			padding: 15px 30px;
+			text-align: center;  
+		        font-size: 16px;
+			margin: 4px 2px;
+		        cursor: pointer;
+			}
+			img {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>A website being built for my Web Design Class</h1>
@@ -15,15 +41,18 @@
 		<q>It's not homemade pasta if it doesn't look like Australia</q> - Todd C. Viola</p>
 		<img src="images/DroppingGels.jpg" 
 		     alt="An image of me dropping gels in a theater."
-		     srcset="images/DroppingGels-small.jpg 240w,
-			     images/DroppingGels-medium.jpg 480w,
-			     images/DroppingGels-large.jpg 768w"
+		     srcset="images/DroppingGels-small.jpg 563w,
+			     images/DroppingGels-medium.jpg 750w,
+			     images/DroppingGels-large.jpg 975w"
 		     sizes="(max-width: 480px) 95vw,
 			    (max-width: 800px) 45vw,
-			    30vw"> 		<!-- Photo taken by Todd Viola(my dad)-->
+			    25vw"> 		<!-- Photo taken by Todd Viola(my dad)-->
 		<p>Here's some other web pages made by me:</p>
-		<a href="https://evie-strings.github.io/practice/terminal.html">Basics of Vim</a>
-		<a href="https://evie-strings.github.io/practice/minimal.html">Minimal Webpage</a>
-
+		<div class="buttondiv">
+			<button type="button" target="_blank" class="empty"><p>a</p></button>
+			<button type="button" target="_blank" class="links"><a href="https://evie-strings.github.io/practice/terminal.html">Basics of Vim</a></button>
+			<button type="button" target="_blank" class="links"><a href="https://evie-strings.github.io/projects/recipes/index.html">Family Recipe Book</a></button>		
+			<button type="button" target=_blank" class="empty"></button>	
+		</div>
 	</body>
 </html>
