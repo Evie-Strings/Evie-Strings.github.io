@@ -3,25 +3,21 @@
 
 ## Part 1: Key Exchange
 
-My Key:
-My Partner's Key:
+My Key: 2
 
-Our initial shared key:
+My Partner's Key: 8
+
+Our initial shared key: 10
 
 ## Part 2: Messaging
 
-Complete this table with each of your messages. This should 
-include the entire conversation - the messages that you sent
-and the messages that you received.
 
-(If you used something other than the caesar cipher here, describe what you did)
-
-| Encoded Message | Decoded Message | Key |
-| --------------- | --------------- | --- |
-|                 |                 |     |
-|                 |                 |     |
-|                 |                 |     |
-|                 |                 |     |
+| Encoded Message     | Decoded Message     | Key |
+| ---------------     | ---------------     | --- |
+|Rovvy ryg kbo iye    |Hello how are you    | 10  |
+|Apcqpnewj qtyp xlolxp|Perfectly fine madame| 11  |
+|Vojs mci twbwgvsr mcif dfcxsqhg?|Have you finished your projects?| 14 |
+|Klt tev tlria vlr bsbo qefkh qexq?|Now why would you even think that?| 23 |
 
 
 ## Part 3: Connection to TCP/IP Model
@@ -37,9 +33,175 @@ Go back to the first encrypted message that you sent (it should be in `rsa_encry
 This message is represented as a string of letters, numbers, and symbols. But we know that the real message is in binary.
 
 Select the first six characters from this message and copy them here:
-
+RvVEvu
 Using the ASCII table, convert these five characters to binary (if necessary,
 include leading zeroes so that each character is 8 bits): 
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+82 118 86 69 118 117
+
+
 
 ### Transport Layer: Break your message into packets
 
