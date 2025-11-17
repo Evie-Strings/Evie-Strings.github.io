@@ -17,7 +17,7 @@ Our initial shared key: 10
 |Rovvy ryg kbo iye    |Hello how are you    | 10  |
 |Apcqpnewj qtyp xlolxp|Perfectly fine madame| 11  |
 |Vojs mci twbwgvsr mcif dfcxsqhg?|Have you finished your projects?| 14 |
-|Klt tev tlria vlr bsbo qefkh qexq?|Now why would you even think that?| 23 |
+|Klt tev tlria vlr bsbo qefkh qexq?|Now why would you ever think that?| 23 |
 
 
 ## Part 3: Connection to TCP/IP Model
@@ -82,6 +82,8 @@ Assume that each packet can hold two bytes. Fill in the packet information below
 
 	These messages use TCP in the transport layer because it focuses more on accuracy over speed. UDP is used almost exclusively for live messages, such as multiplayer games or live streams.
 - Now that you've created packets in the transport layer, give a short explanation of what happens to these packets in the internet layer and in the link layer.
+
+In the internet layer, routers take move packets to their destination by sending them where they think they should go based on the small maps of the internet they have. In the link layer different computers work together to ensure fair access to the packets information.
 - This protocol successfully encrypts the **content** of the message. Even though and adversary in the middle can't read the content of the message, what other information can they still see?
 
 	An adversary in the middle can still see where the message is going, who sent it, how many packets there are, and any other information contained in the header of the document.
