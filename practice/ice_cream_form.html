@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Ice Cream Form</title>
+		<link rel="stylesheet" href="../css/navbar.css">
 		<script src="../js/validate.js"></script>
 		<style>
 			input, label, select {
@@ -16,6 +17,19 @@
 		</style>
 	</head>
 	<body>
+		<ul class="navbar">
+			<li class="navbar"><a href="index.html">Home</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)">Practice</a>
+					<div class="dropdown-content">
+						<a href="practice/terminal.html">Basics of Vim</a>
+						<a href="practice/ice_cream_form.html">Ice Cream Form</a>
+					</div>
+			</li>
+			<li><a href="projects/recipes/index.html">Family Recipes</a></li>
+			<li><a href="reading.html">Reading Blog</a></li>
+		</ul>
+
 		<form action="https://httpbin.org/post"
 			method="post">
 
