@@ -10,14 +10,14 @@
 		<style>
 			table, th, td, caption{
 				border: 1px black solid;
+				border-collapse: collapse;
 				padding: 3px;
 			}
 			table{
 				margin: 0 auto;
-				border-spacing: 5px;
 			}
 			th, td {
-				padding: 3px;
+				padding: 5px;
 				background-color: SeaShell;
 			}
 		</style>
@@ -71,7 +71,7 @@
 			</tr>
 			<tr>
 				<th rowspan="8">Navigation</th>
-				<td><kbd>w</kbd></td>
+				<td class="commands"><kbd>w</kbd></td>
 				<td>Jumps forward to the start of a word</td>
 			</tr>
 			<tr>
@@ -152,6 +152,31 @@
 			<tr>
 				<td><kbd>U</kbd></td>
 				<td>Replaces text with uppercase</td>
+			</tr>
+			<tr>
+				<th rowspan="6">File Navigation</th>
+				<td><kbd>:w</kbd></td>
+				<td>Saves(writes) edits to the file</td>
+			</tr>
+			<tr>
+				<td><kbd>:q</kbd></td>
+				<td>Exits the file</td>
+			</tr>
+			<tr>
+				<td><kbd>:e</kbd></td>
+				<td>Switches to a new file</td>
+			</tr>
+			<tr>
+				<td><kbd>:vsp</kbd></td>
+				<td>Opens a new file alongside your current one</td>
+			</tr>
+			<tr>
+				<td><kbd>Ctrl w</kbd></td>
+				<td>Switches between files opened with <kbd>:vsp</kbd></td>
+			</tr>
+			<tr>
+				<td><kbd>Ctrl h</kbd></td>
+				<td>Switches between files opened with <kbd>:vsp</kbd></td>
 			</tr>
 		</table>
 	</body>
