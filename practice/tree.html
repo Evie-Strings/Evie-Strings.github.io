@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TREE</title>
+		<script src="../js/validate.js"></script>
+<style>
+
+body {
+	background-color: lightblue;
+}
+
+#container {
+	position: relative;
+	background-color: white;
+	width: 600px;
+	height: 80vh;
+	margin: auto;
+}
+
+#tree {
+	width: 0px;
+	height: 0px;
+	border-bottom: 80vh solid green;
+	border-left: 300px solid transparent;
+	border-right: 300px solid transparent;
+}
+
+#box {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	top: 400px;
+	left: 300px;
+
+}
+
+#rhombus {
+  position: absolute;
+  height: 30px; 
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  background: #865ea6;
+  top: 250px;
+  left: 350px;
+}
+
+#star {
+  position: absolute;
+  width: 30px;  
+  aspect-ratio: 1;
+  background: #F8CA00;
+  clip-path: polygon(50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+   ); 
+  top: 200px;
+  left: 200px;
+}
+
+#octagon {
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  --o:calc(50%*tan(-22.5deg));
+  clip-path: polygon(
+    var(--o) 50%,
+    50% var(--o),
+    calc(100% - var(--o)) 50%,
+    50% calc(100% - var(--o))
+  );
+  background: #3B8686;
+  top: 500px;
+  left: 150px;
+}
+
+#pacman {
+  position: absolute;
+  height: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(6% 6% at 60% 25%,#000 90%,#0000),
+    radial-gradient(circle at 35% 35%,#0000,70%,#0005) #fc0;
+  clip-path: polygon(0 0,100% 0,100% 25%,50% 50%,100% 75%,100% 100%,0 100%);
+  top: 0px;
+  left: 275px;
+}
+
+</style>
+	</head>
+	<body>
+		<h1>This is a tree</h1>
+		<div id="container">
+			<div id="tree">
+				<div id="box">
+				</div>
+				<div id="rhombus">					
+				</div>
+				<div id="star">					
+				</div>
+				<div id="octagon">					
+				</div>
+				<div id="pacman">					
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
