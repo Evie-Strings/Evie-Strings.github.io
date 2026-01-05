@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Holy Grail Grid</title>
+		<script src="../js/validate.js"></script>
+
+		<style>
+		.grid {
+		display: grid;
+		height: 100vh;
+
+		grid:
+		'head head head' 100px
+		'menu main side' 1fr
+		'foot foot foot' 200px
+		/150px 1fr 150px;
+		gap: 10px;
+		}
+	
+		#header {
+		grid-area: head;
+		background-color: green;
+		font-size: 24px;
+		color: white;
+		text-align: center;
+		}
+
+		#side1 {
+		grid-area: menu;
+		}
+
+		#main {
+		grid-area: main;
+		}
+
+		#side2 {
+		grid-area: side;
+		}
+
+		#foot {
+		grid-area: foot;
+		}
+
+		#header, #side1, #main, #side2, #foot {
+		background-color: green;
+		font-size: 24px;
+		text-align: center;
+
+		}
+
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div id="header">HEADER</div>
+			<div id="side1">SIDE</div>
+			<div id="main">MAIN</div>
+			<div id="side2">SIDE</div>
+			<div id="foot">FOOT</div>
+
+		</div>		
+	</body>
+</html>
