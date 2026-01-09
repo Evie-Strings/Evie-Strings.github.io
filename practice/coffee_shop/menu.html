@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coffee Menu</title>
+        <script src="../../js.validate.js"></script>
+        <style>
+            .grid {
+	display: grid;
+	height: 100vh;
+
+	grid: 'head head head' 75px
+		'main1 main2 main3' 1fr
+	/ 1fr 1fr 1fr;
+}
+.head {
+grid-area: head;
+}
+.card1 {
+grid-area: main1;
+}
+.card2 {
+grid-area: main2;
+}
+.card3 {
+grid-area: main3;
+}
+.card1, .card2, .card3 {
+background-color: #421f09;
+color: white;
+margin: auto;
+font-size: 60px;
+border-radius: 25px;
+padding: 120px;
+}
+body {
+    background-color: blanchedalmond;
+}
+a:link {
+	color: white; 
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+a:visited {
+	color: white;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+ul.navbar {
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #421f09;
+display: flex;
+height: 100%;
+}
+
+ul.navbar li a {
+display: block;
+color: white;
+padding: 14px 16px;
+text-decoration-line: underline;
+text-decoration-style: wavy;
+
+}
+
+ul.navbar li a:hover {
+background-color: #5e3412;
+}
+
+li.nav a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="head">
+            <ul class="navbar">
+                <li><a href="../top_chef.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="our_story.html">Our Story</a></li>
+            </ul>
+            </div>
+            <div class="card1">
+                <a href="menu/coffee.html">Coffee</a>
+            </div>
+            <div class="card2">
+                <a href="menu/tea.html">Tea</a>
+            </div>
+            <div class="card3">
+                <a href="menu/food.html">Food</a>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGN UP PLEASE</title>
+        <script src="../../js.validate.js"></script>
+        <style>
+            form {
+              text-align: center;
+            }
+			input, label, select {
+				display: block;
+				margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                font-size: 24px;
+                text-decoration-line: underline;
+                text-decoration-style: wavy;    
+            }
+            button {
+                margin: 7px;
+                padding: 5px;
+                font-size: 20px;
+            }
+            .buttons {
+                margin: 7px;
+            }
+body {
+    background-color: blanchedalmond;
+}
+ul.navbar {
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #421f09;
+display: flex;
+}
+
+ul.navbar li a {
+display: block;
+color: white;
+padding: 14px 16px;
+text-decoration-line: underline;
+text-decoration-style: wavy;
+
+}
+
+ul.navbar li a:hover {
+background-color: #5e3412;
+}
+
+li.nav a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+		</style>
+    </head>
+
+    <ul class="navbar">
+        <li><a href="../top_chef.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="our_story.html">Our Story</a></li>
+    </ul>
+
+    <form action="https://httpbin.org/post"
+    method="post">
+
+    <label for="yourname">What is your email address?</label>
+    <input type="text" name="yourname" id="yourname">
+
+    <label for="youremail">What is your email address?</label>
+    <input type="email" name="youremail" id="youremail">
+
+    <label for="yourphone">What is your phone number?</label>
+    <input type="text" name="yourphone" id="yourphone">
+
+    <div class="buttons">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    </div>
+</form>
+</html>

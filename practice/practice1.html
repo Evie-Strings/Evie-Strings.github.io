@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Holy Grail Practice</title>
+        <script src="../js/validate.js"></script>
+
+		<style>
+		.grid {
+		display: grid;
+		height: 100vh;
+
+		grid:
+		'head head head' 100px
+		'menu main side' 1fr
+		'foot foot foot' 200px
+		/150px 1fr 150px;
+		gap: 10px;
+		}
+	
+		#header {
+		grid-area: head;
+		}
+
+		#side1 {
+		grid-area: menu;
+		}
+
+		#main {
+		grid-area: main;
+		}
+
+		#menu {
+		grid-area: side;
+		}
+
+		#foot {
+		grid-area: foot;
+		}
+
+		</style>
+    </head>
+    <body>
+        <div class="grid">
+			<div id="header">
+                <h1>Practice</h1>
+                <h2>This is Practice</h2>
+            </div>
+			<div id="side1">
+
+			</div>
+			<div id="main">
+
+			</div>
+			<div id="menu">
+				<ul class="navbar">
+					<li>
+						<a href="box_model.html"></a>
+					</li>
+					<li><a href="projects/recipes/index.html">Family Recipes</a></li>
+					<li><a href="reading.html">Reading Blog</a></li>
+				</ul>
+			</div>
+			<div id="foot">
+				
+			</div>
+        </div>
+    </body>
+</html>

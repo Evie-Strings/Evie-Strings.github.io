@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Coffee Shop</title>
+		<script src="../js.validate.js"></script>
+<style>
+.grid {
+	display: grid;
+	height: 100vh;
+
+	grid: 'head' 75px
+		'main' 1fr
+	/ 1fr;
+}
+.head {
+grid-area: head;
+}
+body {
+    background-color: blanchedalmond;
+}
+ul.navbar {
+list-style-type: none;
+margin: 0;
+padding: 0;
+background-color: #421f09;
+display: flex;
+height: 100%;
+}
+
+ul.navbar li a {
+display: block;
+color: white;
+padding: 14px 16px;
+text-decoration-line: underline;
+text-decoration-style: wavy;
+
+}
+
+ul.navbar li a:hover {
+background-color: #5e3412;
+}
+
+li.nav a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+img {
+width: 100%;
+height: 100%;
+display: block;
+}
+
+#CAT {
+	position: absolute;
+	left: 900px;
+	top: 650px;
+	background-color: #421f09;
+	padding: 20px;
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+a:link {
+	color: white;
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+}
+a:visited {
+	color: white;
+	text-decoration-line: underline;
+	text-decoration-style: wavy;
+}
+
+</style>
+	</head>
+	<body>
+	<div class="grid">
+		<div class="head">
+		<ul class="navbar">
+			<li><a href="top_chef.html">Home</a></li>
+			<li><a href="coffee_shop/menu.html">Menu</a></li>
+			<li><a href="coffee_shop/membership.html">Membership</a></li>
+			<li><a href="coffee_shop/our_story.html">Our Story</a></li>
+		</ul>
+		</div>
+		<div class="main">
+		<img src="../images/coffee.jpg" 
+		     alt="An image of a cup of coffee.">
+		</div>
+		<div id="CAT">
+			<a href="coffee_shop/menu.html">Shop Now</a> <!--Pexels Stock images https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fcoffee%2F&ved=0CBYQjRxqFwoTCMC5n6vY_pEDFQAAAAAdAAAAABBY&opi=89978449-->
+		</div>
+	</div>
+	</body>
+</html>
