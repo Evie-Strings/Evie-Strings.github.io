@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <title>*Insert*</title>
+        <meta charset="utf-8">
         <script src="../../js.validate.js"></script>
-        <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16 32x32">
         
         <link rel="stylesheet" href="style.css">
         <style>
@@ -12,13 +13,17 @@
 	height: 100vh;
 
 	grid: 'head head head head' 75px
-		'hero hero hero hero' 2fr
-        'text text text text' 30px
-        'new1 new2 new3 new4' 1fr
+        'main1 main2 main3 main4' 1fr
+        'foot foot foot foot' 30%
 	/ 1fr 1fr 1fr 1fr;
 }
+
 .head {
 grid-area: head;
+}
+
+footer {
+grid-area: foot;
 }
         </style>
     </head>
@@ -47,6 +52,29 @@ grid-area: head;
                 <li><a href="purchaseform.html">Requests</a></li>
             </div>
 		</ul>
+        <footer>
+            <div class="footer-col">
+                <h4>NAME</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Place Purchase</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pattern Makers</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
+                <a href="patternmakers.html">LINK NAME</a>
+            </div>
+    
+        </footer>
     </div>   
     </body>
 </html>

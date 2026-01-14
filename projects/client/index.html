@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>*Insert*</title>
+        <meta charset="utf-8">
+        <script src="../../js.validate.js"></script>
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+        
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .grid {
+	display: grid;
+	height: 100vh;
+
+	grid: 'head head head head' 75px
+        'main1 main2 main3 main4' 1fr
+        'foot foot foot foot' 30%
+	/ 1fr 1fr 1fr 1fr;
+}
+
+.head {
+grid-area: head;
+}
+
+footer {
+grid-area: foot;
+}
+        </style>
+    </head>
+    <body>
+    <div class="grid"> 
+        <ul class="navbar head">
+            <div class="navleft">
+                <h1>NAME</h1>
+            </div>
+            <div class="navright">
+			    <li><a href="index.html">Home</a></li>
+			    <li class="dropdown">
+				    <a href="javascript:void(0)">Collections</a>
+					    <div class="dropdown-content">
+						    <a href="springcollect.html">Spring</a>
+						    <a href="summercollect.html">Summer</a>
+                            <a href="fallcollect.html">Fall</a>
+						    <a href="wintercollect.html">Winter</a>
+
+                            <a href="newreleases.html">New Releases</a>
+						    <a href="popularproducts.html">Popular Products</a>
+					    </div>
+			    </li>
+			    <li><a href="productlist.html">Products</a></li>
+			    <li><a href="purchaseform.html">Buy Now</a></li>
+                <li><a href="purchaseform.html">Requests</a></li>
+            </div>
+		</ul>
+        <footer>
+            <div class="footer-col">
+                <h4>NAME</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
+                <a href="aboutus.html">About Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Place Purchase</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pattern Makers</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
+                <a href="patternmakers.html">LINK NAME</a>
+            </div>
+    
+        </footer>
+    </div>   
+    </body>
+</html>
