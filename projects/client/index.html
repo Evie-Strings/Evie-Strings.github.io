@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>*Insert*</title>
+        <title>Yarn Ahoy Home Page</title>
         <meta charset="utf-8">
         <script src="../../js.validate.js"></script>
-        <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
         
         <link rel="stylesheet" href="style.css">
         <style>
-            .grid {
-	display: grid;
-	height: 100vh;
+        .grid {
+	    display: grid;
+	    height: 100vh;
 
-	grid: 'head head head head' 75px
-        'main1 main2 main3 main4' 1fr
+	    grid: 'head head head head' 75px
+        'hero hero hero hero' 720px
+        'main1 main2 main3 main4' 20%
         'foot foot foot foot' 30%
-	/ 1fr 1fr 1fr 1fr;
-}
+	    / 1fr 1fr 1fr 1fr;
 
-.head {
-grid-area: head;
-}
+        gap: 20px;
+        }
 
-footer {
-grid-area: foot;
-}
+        .head {
+        grid-area: head;
+        }
+
+        #heroimage {
+        grid-area: hero;
+        }
+
+        footer {
+        grid-area: foot;
+        }
         </style>
     </head>
     <body>
     <div class="grid"> 
         <ul class="navbar head">
             <div class="navleft">
-                <h1>NAME</h1>
+                <h1>Yarn Ahoy</h1>
             </div>
             <div class="navright">
 			    <li><a href="index.html">Home</a></li>
@@ -49,12 +56,13 @@ grid-area: foot;
 			    </li>
 			    <li><a href="productlist.html">Products</a></li>
 			    <li><a href="purchaseform.html">Buy Now</a></li>
-                <li><a href="purchaseform.html">Requests</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
             </div>
 		</ul>
+        <img src="../../images/black.jpg" id="heroimage">
         <footer>
             <div class="footer-col">
-                <h4>NAME</h4>
+                <h4>Yarn Ahoy</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
                 <a href="aboutus.html">About Us</a>
@@ -71,7 +79,7 @@ grid-area: foot;
                 <h4>Pattern Makers</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis fermentum tellus. Vestibulum fermentum quis nunc non tempus.</p>
-                <a href="patternmakers.html">LINK NAME</a>
+                <a href="patternmakers.html">Chesck Out Their Work</a>
             </div>
     
         </footer>

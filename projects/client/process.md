@@ -17,7 +17,11 @@
 ## Second Meeting: January 14, 2026
 
 ### Discussion Points
-- 
+- Outlining area that color palettes need to be made for
+- Setting realistic goals for how many pages will be made by the deadline
+- Added company name to website
+- Began building homepage
+- Outlined what questions to put in forms (google) and clarified "Request" expectations
 
 ### Work Done Between January 14, 2026 and January XX, 2026
 - 

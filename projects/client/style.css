@@ -37,7 +37,8 @@
     }
     
     .navbar li a:hover {
-    background-color: #486794;
+    color: #5a8eae;
+    text-decoration: underline;
     }
     
     li.nav a, .dropbtn {
