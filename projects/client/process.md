@@ -24,4 +24,9 @@
 - Outlined what questions to put in forms (google) and clarified "Request" expectations
 
 ### Work Done Between January 14, 2026 and January XX, 2026
+- Created both google forms
+- Updated footer text
+- Changed backgroud and text colors according to client preference 
+- Added favicon to website
+- Added text to About Us page
 - 
