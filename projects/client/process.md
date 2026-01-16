@@ -29,4 +29,6 @@
 - Changed backgroud and text colors according to client preference 
 - Added favicon to website
 - Added text to About Us page
-- 
+- Built cards for product placement
+- Laid out cards on all product pages
+- Added page title to all pages

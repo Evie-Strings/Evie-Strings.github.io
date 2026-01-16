@@ -14,7 +14,9 @@
 
 	    grid: 'head head head head' 75px
         'hero hero hero hero' 720px
-        'main1 main2 main3 main4' 20%
+        'label label label label' 50px
+        'main1 main2 main3 main4' 50%
+        'main5 main6 main7 main8' 50%
         'foot foot foot foot' 30%
 	    / 1fr 1fr 1fr 1fr;
 
@@ -28,6 +30,37 @@
         #heroimage {
         grid-area: hero;
         }
+        .label {
+            grid-area: label;
+
+            line-height: 0%;
+            text-align: center;
+        }
+
+        .card1 {
+grid-area: main1;
+}
+.card2 {
+grid-area: main2;
+}
+.card3 {
+grid-area: main3;
+}
+.card4 {
+grid-area: main4;
+}
+.card5 {
+grid-area: main5;
+}
+.card6 {
+grid-area: main6;
+}
+.card7 {
+grid-area: main7;
+}
+.card8 {
+grid-area: main8;
+}
 
         footer {
         grid-area: foot;
@@ -41,7 +74,7 @@
                 <h1>Yarn Ahoy</h1>
             </div>
             <div class="navright">
-			    <li><a href="index.html">Home</a></li>
+			    <li><a href="index.html" class="active">Home</a></li>
 			    <li class="dropdown">
 				    <a href="javascript:void(0)">Collections</a>
 					    <div class="dropdown-content">
@@ -60,6 +93,57 @@
             </div>
 		</ul>
         <img src="../../images/black.jpg" id="heroimage">
+        <div class="label">
+            <h1>Featured</h1>
+        </div>
+        <div class="card1 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Black Coffee</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card2 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Latte</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card3 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Espresso</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card4 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Macchiato</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card5 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Flat White</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card6 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Cappuccino</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card7 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Flat White</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
+        <div class="card8 card">
+            <img src="../../images/black.jpg" id="heroimage" height="150px" width="100%">
+            <p>Cappuccino</p>
+            <p>Item Number: 1</p>
+            <p>$100</p>
+        </div>
         <footer>
             <div class="footer-col">
                 <h4>Yarn Ahoy</h4>
