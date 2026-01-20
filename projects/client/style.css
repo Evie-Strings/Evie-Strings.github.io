@@ -65,7 +65,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #4A70A9;
+        background-color: #1E3569;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -174,4 +174,19 @@
         
         .card img {
             border-radius: 25px;
+        }
+
+        #CTA {
+            position: absolute;
+            left: 950px;
+            top: 550px;
+            background-color: #4A70A9;
+            padding: 25px;
+            font-size: 30px;
+            border-radius: 25px;
+        }
+
+        #CTA a {
+            color: white;
+            text-decoration: none;
         }

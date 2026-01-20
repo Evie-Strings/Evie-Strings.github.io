@@ -32,3 +32,5 @@
 - Built cards for product placement
 - Laid out cards on all product pages
 - Added page title to all pages
+- Added CTA button
+- Made hero image placeholder take full page width
