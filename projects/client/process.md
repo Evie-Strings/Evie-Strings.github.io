@@ -23,7 +23,7 @@
 - Began building homepage
 - Outlined what questions to put in forms (google) and clarified "Request" expectations
 
-### Work Done Between January 14, 2026 and January XX, 2026
+### Work Done Between January 14, 2026 and January 21, 2026
 - Created both google forms
 - Updated footer text
 - Changed backgroud and text colors according to client preference 
@@ -34,3 +34,4 @@
 - Added page title to all pages
 - Added CTA button
 - Made hero image placeholder take full page width
+- Added all collection pages
