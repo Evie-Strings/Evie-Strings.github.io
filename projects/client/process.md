@@ -35,3 +35,15 @@
 - Added CTA button
 - Made hero image placeholder take full page width
 - Added all collection pages
+
+## Third Meeting: Januray 21, 2026
+
+### Discussion Points
+- Getting images and text sent over
+- Readjusting fonts
+
+### Work Done Between January 21, 2026 and January XX, 2026
+- Added Pattern Makers page
+- Updated link directions
+- Moved image into media folder
+- VALIDATED PAGES
