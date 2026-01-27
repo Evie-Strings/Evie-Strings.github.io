@@ -39,11 +39,13 @@
 ## Third Meeting: Januray 21, 2026
 
 ### Discussion Points
-- Getting images and text sent over
-- Readjusting fonts
+- Timeframe for getting images and text sent over
+- Readjusting fonts to more readable options
 
-### Work Done Between January 21, 2026 and January XX, 2026
+### Work Done Between January 21, 2026 and January 28, 2026
 - Added Pattern Makers page
 - Updated link directions
 - Moved image into media folder
+- Added client-requested fonts
+- Rebuilt navabr with Flexbox to meet CSS Best Practices
 - VALIDATED PAGES

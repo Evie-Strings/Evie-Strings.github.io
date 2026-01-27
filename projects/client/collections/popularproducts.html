@@ -22,7 +22,7 @@
     gap: 20px;
 }
 
-.head {
+header {
 grid-area: head;
 }
 
@@ -65,29 +65,28 @@ grid-area: foot;
     </head>
     <body>
     <div class="grid"> 
-        <ul class="navbar head">
-            <div class="navleft">
-                <h1>Yarn Ahoy</h1>
-            </div>
-            <div class="navright">
-			    <li><a href="../index.html">Home</a></li>
-			    <li class="dropdown">
-				    <a href="javascript:void(0)">Collections</a>
-					    <div class="dropdown-content">
-						    <a href="springcollect.html">Spring</a>
-						    <a href="summercollect.html">Summer</a>
-                            <a href="fallcollect.html">Fall</a>
-						    <a href="wintercollect.html">Winter</a>
-
-                            <a href="newreleases.html">New Releases</a>
-						    <a href="popularproducts.html">Popular Products</a>
-					    </div>
-			    </li>
-			    <li><a href="../productlist.html">Products</a></li>
-			    <li><a href="../purchaseform.html">Buy Now</a></li>
-                <li><a href="../suggestions.html">Suggestions</a></li>
-            </div>
-		</ul>
+        <header>
+            <h1 id="nav-title">Yarn Ahoy</h1>
+            <nav>
+                <ul class="navbar head">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">Collections</a>
+                                <div class="dropdown-content">
+                                    <a href="springcollect.html">Spring</a>
+                                    <a href="summercollect.html">Summer</a>
+                                    <a href="fallcollect.html">Fall</a>
+                                    <a href="wintercollect.html">Winter</a>
+        
+                                    <a href="newreleases.html">New Releases</a>
+                                    <a href="popularproducts.html">Popular Products</a>
+                        </li>
+                        <li><a href="../productlist.html">Products</a></li>
+                        <li><a href="../purchaseform.html">Buy Now</a></li>
+                        <li><a href="../suggestions.html">Suggestions</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="label">
             <h1>Popular Products</h1>
         </div>

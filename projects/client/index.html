@@ -22,7 +22,7 @@
         gap: 20px;
         }
 
-        .head {
+        header {
         grid-area: head;
         }
 
@@ -56,29 +56,28 @@ grid-area: main4;
     </head>
     <body>
     <div class="grid"> 
-        <ul class="navbar head">
-            <div class="navleft">
-                <h1>Yarn Ahoy</h1>
-            </div>
-            <div class="navright">
-			    <li><a href="index.html" class="active">Home</a></li>
-			    <li class="dropdown">
-				    <a href="javascript:void(0)">Collections</a>
-					    <div class="dropdown-content">
-						    <a href="collections/springcollect.html">Spring</a>
-						    <a href="collections/summercollect.html">Summer</a>
-                            <a href="collections/fallcollect.html">Fall</a>
-						    <a href="collections/wintercollect.html">Winter</a>
-
-                            <a href="collections/newreleases.html">New Releases</a>
-						    <a href="collections/popularproducts.html">Popular Products</a>
-					    </div>
-			    </li>
-			    <li><a href="productlist.html">Products</a></li>
-			    <li><a href="purchaseform.html">Buy Now</a></li>
-                <li><a href="suggestions.html">Suggestions</a></li>
-            </div>
-		</ul>
+        <header>
+            <h1 id="nav-title">Yarn Ahoy</h1>
+            <nav>
+                <ul class="navbar head">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">Collections</a>
+                                <div class="dropdown-content">
+                                    <a href="collections/springcollect.html">Spring</a>
+                                    <a href="collections/summercollect.html">Summer</a>
+                                    <a href="collections/fallcollect.html">Fall</a>
+                                    <a href="collections/wintercollect.html">Winter</a>
+        
+                                    <a href="collections/newreleases.html">New Releases</a>
+                                    <a href="collections/popularproducts.html">Popular Products</a>
+                        </li>
+                        <li><a href="productlist.html">Products</a></li>
+                        <li><a href="purchaseform.html">Buy Now</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                </ul>
+            </nav>
+        </header>
         <img src="media/black.jpg" id="heroimage" height="720" width="1430" alt="large black image, representing one collection">
         <div class="label">
             <h1>Featured</h1>
