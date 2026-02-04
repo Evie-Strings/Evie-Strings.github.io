@@ -19,6 +19,7 @@ header {
     margin-right: auto;
     font-size: 40px;
     color: white;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
 header a {
@@ -79,7 +80,7 @@ header a:hover {
 
     body {
         margin: 0;
-        font-family: serif;
+        font-family: Arial, Helvetica, sans-serif;
         min-height: 100vh; 
         display: grid;
         grid-template-rows: 1fr auto;
@@ -180,4 +181,5 @@ header a:hover {
         #CTA a {
             color: white;
             text-decoration: none;
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
         }
