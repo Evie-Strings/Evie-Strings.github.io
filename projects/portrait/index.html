@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Self Portrait</title>
+        <script src="canvas.js">
+		</script>
+    </head>
+    <body>
+        <canvas id="canvas" width="5000" height="5000"></canvas>
+        <script>
+            function draw() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+  
+    ctx.fillStyle = "rgb(232, 213, 193)";
+    ctx.fillRect(400, 100, 600, 700)
+  
+    ctx.fillStyle = "rgb(59, 35, 8)";
+    ctx.fillRect(250, 150, 200, 800)
+
+    ctx.fillStyle = "rgb(59, 35, 8)";
+    ctx.fillRect(950, 150, 200, 800)
+ 
+  }
+  draw();
+        </script>
+    </body>
+</html>
