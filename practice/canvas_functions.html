@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Functions</title>
+    </head>
+    <body>
+        <h1>Canvas with Functions</h1>
+
+        <canvas width=800 height=800 id="myCanvas"></canvas>
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+
+            //Function we Know
+            ctx.fillRect(100, 100, 600, 600);
+
+            //fillRectWithColor
+            function fillRectWithColor(x,y,width,height,color) {
+                ctx.fillStyle=color;
+                ctx.fillRect(x,y,width,height);
+            }
+
+            //Calling the Function
+            fillRectWithColor(100,100,100,100, "green");
+            fillRectWithColor(600,600,100,100, "#F3564A");
+
+            //fillCircleWithColor function
+            function fillCircleWithColor(x,y,radius,clockwise,color) {
+            ctx.fillStyle=color;
+            ctx.beginPath();
+            ctx.arc(x,y,radius,0,Math.PI*2,clockwise);
+            ctx.fill();
+            }
+
+            fillCircleWithColor(100,100,100,true,"red");
+            fillCircleWithColor(600,600,100,false,"white");
+
+            //drawSnowman
+            function drawSnowman(x,y, color) {
+                fillCircleWithColor(x,y,70, "white"); //abdomen
+                fillCircleWithColor(x,y-120,50, "white"); //head
+                fillCircleWithColor(x,y+170,100,"white"); //thorax
+            }
+
+            drawSnowman(200, 200);
+            drawSnowman(400,400);
+        </script>
+    </body>
+</html>
