@@ -4,7 +4,7 @@
         <title>Animation</title>
     </head>
     <body>
-        <h1>Canvas with Animation</h1>
+        <h1>Animation</h1>
 
         <canvas width=800 height=800 id="myCanvas"></canvas>
 
@@ -13,12 +13,42 @@
         const ctx = canvas.getContext("2d");
 
         let x = 1;
+        let x2 = 1;
+
+        let speed = 5;
+        let speed2 = 10;
+
+        let time = 0;
 
         function animate(){
-            x = x + 1; //= means assignment not solve for x
+            time = time + 1;
 
+            if (time < 170) {
+            //early, move x
+            x = x + speed;
+            }
+
+            if (time > 160) {
+            //later move x2
+            x2 = x2 + speed2;
+            }   
+        
+            /*
+            if (x > 800) {
+            x = 0;
+        }
+
+        if (x2 > 800) {
+            x2 = 0;
+        }
+            */
+
+        //clear
             ctx.clearRect(0, 0, 800, 800);
+        //draw
             ctx.fillRect(x, 100, 100, 100);
+            ctx.fillRect(x2, 100, 100, 100);
+
             console.log(x);
             requestAnimationFrame(animate);
         }
