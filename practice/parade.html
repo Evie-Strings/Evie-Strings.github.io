@@ -25,17 +25,17 @@
 
                 x = x + speed;
 
-                if (time > 75) {
+                if (time > 80) {
                     //later move x2
                     x2 = x2 + speed;
                 }
                 
-                if (time > 150) {
+                if (time > 160) {
                     //later move x3
                     x3 = x3 + speed;
                 }
 
-                if (time > 225) {
+                if (time > 240) {
                     //later move x4
                     x4 = x4 + speed;
                 }
@@ -84,6 +84,48 @@
             ctx.arc(x+175, 295, 25, Math.PI, Math.PI * 2, true);
             ctx.fill(); 
 
+            //Eyes - Left
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x+110, 200, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x+85, 200, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x+110, 230, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x+122.5, 200, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x+110, 200, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x+122.5, 230, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            //Eyes - Right
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x+185, 200, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x+160, 200, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x+185, 230, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x+197.5, 200, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x+185, 200, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x+197.5, 230, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
             //Pinky
             ctx.fillStyle = "rgb(242, 157, 245)";    
 
@@ -103,6 +145,48 @@
             ctx.beginPath();
             ctx.arc(x2+166.5, 295, 33.3, Math.PI, Math.PI * 2, true);
             ctx.fill(); 
+
+            //Eyes - Left
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x2+67.5, 220, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x2+42.5, 220, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x2+67.5, 250, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x2+67.5, 235, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x2+55, 235, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x2+67.5, 262.5, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            //Eyes - Left
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x2+132.5, 220, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x2+107.5, 220, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x2+132.5, 250, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x2+132.5, 235, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x2+120, 235, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x2+132.5, 262.5, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
 
             //Inky
             ctx.fillStyle = "rgb(32, 247, 245)";    
@@ -128,6 +212,48 @@
             ctx.arc(x3+175, 295, 25, Math.PI, Math.PI * 2, true);
             ctx.fill(); 
 
+            //Eyes - Right
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x3+90, 200, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x3+65, 200, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x3+90, 230, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x3+77.5, 200, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x3+65, 200, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x3+77.5, 230, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            //Eyes - Left
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x3+15, 200, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x3-10, 200, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x3+15, 230, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x3+2.5, 200, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x3-10, 200, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x3+2.5, 230, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
             //Clyde
             ctx.fillStyle = "rgb(242, 164, 62)";    
 
@@ -147,6 +273,48 @@
             ctx.beginPath();
             ctx.arc(x4+166.5, 295, 33.3, Math.PI, Math.PI * 2, true);
             ctx.fill(); 
+
+            //Eyes - Left
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x4+67.5, 140, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x4+42.5, 140, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x4+67.5, 170, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x4+67.5, 128, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x4+55, 128, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x4+67.5, 158, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            //Eyes - Right
+            ctx.fillStyle = "rgb(222, 224, 252)";    
+
+            ctx.beginPath();
+            ctx.arc(x4+132.5, 140, 25, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x4+107.5, 140, 50, 30);
+            ctx.beginPath();
+            ctx.arc(x4+132.5, 170, 25, Math.PI, Math.PI * 2, true);
+            ctx.fill();
+
+            ctx.fillStyle = "rgb(22, 0, 244)";    
+
+            ctx.beginPath();
+            ctx.arc(x4+132.5, 128, 12.5, Math.PI, Math.PI * 2, false);
+            ctx.fill();
+            ctx.fillRect(x4+120, 128, 25, 30);
+            ctx.beginPath();
+            ctx.arc(x4+132.5, 158, 12.5, Math.PI, Math.PI * 2, true);
+            ctx.fill();
 
             requestAnimationFrame(animate);
         }
