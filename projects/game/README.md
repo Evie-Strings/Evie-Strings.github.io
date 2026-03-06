@@ -16,6 +16,7 @@ graph TD;
     Stage-->StageLeft;
     StageLeft-->WellsLeft;
     WellsLeft-->Downstairs;
+    WellsRight-->Downstairs;
 ```
 
 The player starts just outside the theater, and then walks into the building. They can explore, but must complete all of their objectives within the hour to have a successful show.
