@@ -9,7 +9,7 @@ This game takes place at the Thomas Jefferson Community Theater. I tried to fait
 ```mermaid
 graph TD;
     outside(((Outside)))-->WellsRight;
-    Catwalk-->WellsRight;
+    WellsRight-->Catwalk;
     Flys-->StageRight;
     StageRight-->WellsRight;
     StageRight-->Stage;
