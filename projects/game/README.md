@@ -6,6 +6,18 @@ This game takes place at the Thomas Jefferson Community Theater. I tried to fait
 
 ## Map
 
+```mermaid
+graph TD;
+    outside(((Outside)))-->Wells Right;
+    Catwalk-->Wells Right;
+    Flys-->Stage Right;
+    Stage Right-->Wells Right;
+    Stage Right-->Stage;
+    Stage-->Stage Left;
+    Stage Left-->Wells Left;
+    Wells Left-->Downstairs;
+```
+
 The player starts just outside the theater, and then walks into the building. They can explore, but must complete all of their objectives within the hour to have a successful show.
 
 ## Story
