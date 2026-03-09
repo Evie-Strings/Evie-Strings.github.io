@@ -8,35 +8,43 @@ let gameActive = true; //this variable is required.
 
 
 //Make one function for each location
-function locationA() {
+function wellsRight() {
     clear();
-    print("\nYou are in location A!");
+    print("\nYou are in the Right Wells!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationB");
+        "\n\tstage_right" +
+        "\n\thouse" +
+        "\n\tcatwalks");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationb") {
-            locationB();
-        } else {
+        if (input.toLowerCase() === "stage_right") {
+            stageRight();
+        } 
+        else if (input.toLowerCase() === "house") {
+            locationC();
+        }
+        else {
             stayHere();
-            waitThenCall(locationA);
+            waitThenCall(wellsRight);
         }
     }
     waitForInput(processInput);
 }
 
-function locationB() {
+function stageRight() {
     clear();
-    print("\nYou are in location B!");
+    print("\nYou are in Stage Right!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationA");
+        "\n\tflys" +
+        "\n\tstage" +
+        "\n\twells_right");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationa") {
-            locationA();
+        if (input.toLowerCase() === "wells_right") {
+            wellsRight();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(stageRight);
         }
     }
     waitForInput(processInput);
@@ -49,7 +57,7 @@ function start(){
     print("Welcome to my game! Press any key to start");
 
     function processInput(input){
-            locationA();
+            wellsRight();
     }
     waitForInput(processInput);
 }
