@@ -80,185 +80,185 @@ function techie () {
         waitForInput(processInput);
     }
 
-function stageRight() {
-    clear();
-    print("\nYou are in Stage Right!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\tflys" +
-        "\n\tstage" +
-        "\n\twells_right");
+    function stageRight() {
+       clear();
+       print("\nYou are in Stage Right!");
+       print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tflys" +
+            "\n\tstage" +
+            "\n\twells_right");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_right") {
+        function processInput(input){
+          if (input.toLowerCase() === "wells_right") {
             wellsRight();
+            }
+            else if (input.toLowerCase() === "stage") {
+                stage();
+            }
+            else if (input.toLowerCase() === "flys") {
+                flys();
+            }
+            else {
+                stayHere();
+                waitThenCall(stageRight);
+            }
         }
-        else if (input.toLowerCase() === "stage") {
-            stage();
-        }
-        else if (input.toLowerCase() === "flys") {
-            flys();
-        }
-        else {
-            stayHere();
-            waitThenCall(stageRight);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function flys() {
-    clear();
-    print("\nYou are in the Flys!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\tstage_right");
+    function flys() {
+        clear();
+        print("\nYou are in the Flys!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage_right");
     
-    function processInput(input){
-        if (input.toLowerCase() === "stage_right") {
-            stageRight();
-        } 
-        else {
-            stayHere();
-            waitThenCall(flys);
+        function processInput(input){
+            if (input.toLowerCase() === "stage_right") {
+                stageRight();
+            } 
+            else {
+                stayHere();
+                waitThenCall(flys);
+            }
         }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
 function catwalks() {
-    clear();
-    print("\nYou are in the Catwalks!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\twells_right");
+        clear();
+        print("\nYou are in the Catwalks!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells_right");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_right") {
-            wellsRight();
-        } 
-        else {
-            stayHere();
-            waitThenCall(catwalks);
+        function processInput(input){
+            if (input.toLowerCase() === "wells_right") {
+                wellsRight();
+            } 
+            else {
+                stayHere();
+                waitThenCall(catwalks);
+            }   
         }
+            waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function house() {
-    clear();
-    print("\nYou are in the House!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\twells_right" +
-        "\n\twells_left" +
-        "\n\tstage");
+    function house() {
+        clear();
+        print("\nYou are in the House!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells_right" +
+            "\n\twells_left" +
+            "\n\tstage");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_right") {
-            wellsRight();
-        } 
-        else if (input.toLowerCase() === "wells_left") {
-            wellsLeft();
+        function processInput(input){
+            if (input.toLowerCase() === "wells_right") {
+                wellsRight();
+            } 
+           else if (input.toLowerCase() === "wells_left") {
+                wellsLeft();
+            }
+            else if (input.toLowerCase() === "stage") {
+                stage();
+            }
+            else {
+                stayHere();
+                waitThenCall(house);
+            }
         }
-        else if (input.toLowerCase() === "stage") {
-            stage();
-        }
-        else {
-            stayHere();
-            waitThenCall(house);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function stage() {
-    clear();
-    print("\nYou are on the Stage!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\twells_right" +
-        "\n\twells_left" +
-        "\n\thouse");
+    function stage() {
+        clear();
+        print("\nYou are on the Stage!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells_right" +
+            "\n\twells_left" +
+            "\n\thouse");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_right") {
-            wellsRight();
-        } 
-        else if (input.toLowerCase() === "wells_left") {
-            wellsLeft();
+       function processInput(input){
+            if (input.toLowerCase() === "wells_right") {
+                wellsRight();
+            } 
+            else if (input.toLowerCase() === "wells_left") {
+                wellsLeft();
+            }
+            else if (input.toLowerCase() === "house") {
+               house();
+            }   
+            else {
+                stayHere();
+                waitThenCall(stage);
+            }
         }
-        else if (input.toLowerCase() === "house") {
-            house();
-        }
-        else {
-            stayHere();
-            waitThenCall(stage);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function wellsLeft() {
-    clear();
-    print("\nYou are in the Left Wells!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\tstage_left" +
-        "\n\tdownstairs");
+    function wellsLeft() {
+        clear();
+        print("\nYou are in the Left Wells!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage_left" +
+            "\n\tdownstairs");
     
-    function processInput(input){
-        if (input.toLowerCase() === "stage_left") {
-            stageLeft();
-        } 
-        else if (input.toLowerCase() === "downstairs") {
-            downstairs();
+        function processInput(input){
+            if (input.toLowerCase() === "stage_left") {
+                stageLeft();
+            } 
+            else if (input.toLowerCase() === "downstairs") {
+                downstairs();
+            }
+            else {
+               stayHere();
+               waitThenCall(wellsLeft);
+            }
         }
-        else {
-            stayHere();
-            waitThenCall(wellsLeft);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function stageLeft() {
-    clear();
-    print("\nYou are in Stage Right!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\tstage" +
-        "\n\twells_left");
+    function stageLeft() {
+        clear();
+        print("\nYou are in Stage Right!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage" +
+            "\n\twells_left");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_left") {
-            wellsLeft();
-        } 
-        else if (input.toLowerCase() === "stage") {
-            stage();
+        function processInput(input){
+            if (input.toLowerCase() === "wells_left") {
+                wellsLeft();
+            } 
+            else if (input.toLowerCase() === "stage") {
+                stage();
+            }
+            else {
+                stayHere();
+                waitThenCall(stageLeft);
+            }
         }
-        else {
-            stayHere();
-            waitThenCall(stageLeft);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 
-function downstairs() {
-    clear();
-    print("\nYou are Downstairs!");
-    print("\nWhere do you want to go next? Type where you want to go:" +
-        "\n\twells_right" +
-        "\n\twells_left");
+    function downstairs() {
+        clear();
+        print("\nYou are Downstairs!");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells_right" +
+            "\n\twells_left");
     
-    function processInput(input){
-        if (input.toLowerCase() === "wells_left") {
-            wellsLeft();
-        } 
-        else if (input.toLowerCase() === "wells_right") {
-            wellsRight();
+        function processInput(input){
+            if (input.toLowerCase() === "wells_left") {
+                wellsLeft();
+            } 
+            else if (input.toLowerCase() === "wells_right") {
+                wellsRight();
+            }
+            else {
+                stayHere();
+                waitThenCall(downstairs);
+            }
         }
-        else {
-            stayHere();
-            waitThenCall(downstairs);
-        }
+        waitForInput(processInput);
     }
-    waitForInput(processInput);
-}
 }
 
 //finally, make sure you customize this to tell it what should happen at the
