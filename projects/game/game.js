@@ -15,7 +15,7 @@ function timeCountdown () {
         if (minutes < 10) {
             print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         }
-           if (minutes >= 10) {
+           else if (minutes >= 10) {
             print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         }
 }
@@ -41,7 +41,7 @@ function chooseCharacter () {
         }
         waitForInput(processInput);
 }
-function techie () {
+function techie () { 
     clear();
     outsideTechie();
 
@@ -146,6 +146,15 @@ function catwalksTechie() {
         clear();
         print("\nYou are in the Catwalks!");
         timeCountdown ();
+        if (minutes <= 15) {
+            print("The door is locked right now. Maybe if you come back later...");
+        }
+        else {
+            print("\nYou walk over to the light board and realize it's not turned on." + 
+                "\nThat's an easy fix!" +
+                "\nYou turn on the lightboard and go to cue 1."); 
+                timeCountdown ();
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right");
     
