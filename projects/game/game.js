@@ -1,6 +1,11 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
 let minutes = 0;
+let lightBoardOn = false;
+let gaffTapeFound = false;
+let gaffTapeDelivered = false;
+let setForTopOfShow = false;
+let chatWithFriend = false;
 
 //Declare your other global variables here
 
@@ -127,6 +132,9 @@ function techie () {
         clear();
         print("\nYou are in the Flys!");
         timeCountdown ();
+        print("You come up to the flys to find your friend. They're nowhere to be found, but you find do a roll of gaff tape." +
+            "\nWhat's this doing here? I'd better get this to the sound board!");
+        gaffTapeFound = true;
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right");
     
@@ -154,6 +162,7 @@ function catwalksTechie() {
                 "\nThat's an easy fix!" +
                 "\nYou turn on the lightboard and go to cue 1."); 
                 timeCountdown ();
+                lightboardOn = true;
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right");
@@ -174,6 +183,13 @@ function catwalksTechie() {
         clear();
         print("\nYou are in the House!");
         timeCountdown ();
+        if (gaffTapeFound = false) {
+            print("\nYou walk through the house. You see a group of actors chatting in the seats and some front of house kids running between the house and the lobby.");
+        }
+        else if (gaffTapeFound = true) {
+            print("\nYou walk through the house. You see the leads lined up at the sound board to get their mics on. You walk over and put the roll of gaff tape on the sound board and greet the sound techie sitting there.");
+            gaffTapeDelivered = true;
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right" +
             "\n\twells_left" +
