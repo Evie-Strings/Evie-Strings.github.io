@@ -1,5 +1,6 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
+let minutes = 0;
 
 //Declare your other global variables here
 
@@ -31,28 +32,39 @@ function chooseCharacter () {
         waitForInput(processInput);
 }
 function techie () {
-    function outside() {
+    clear();
+    outsideTechie();
+
+    function outsideTechie() {
         clear();
-        print("\nYou are Outside the theater!");
-        print("\nIt is a beautiful spring say at 5:00 pm and you have a performance tonight. As a techie, it's your job to set for the top of show, find a role of gaff tape, chat with your friend(because of course), and turn on the light board.");
+        print("\nYou are Outside the theater!" + 
+            "\nIt is a beautiful spring day and you have a performance tonight. As a techie, it's your job to set for the top of show, find a role of gaff tape, chat with your friend(because of course), and turn on the light board.");
+        print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         print("\nDo you want to enter the theater? Type where you want to go:" +
             "\n\twells_right");
     
         function processInput(input){
             if (input.toLowerCase() === "wells_right") {
-                wellsRight();
+                wellsRightTechie();
             } 
             else {
                 stayHere();
-                waitThenCall(outside);
+                waitThenCall(outsideTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function wellsRight() {
+    function wellsRightTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are in the Right Wells! You see a few actors and techies milling about.");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+           }
+           if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+           }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right" +
             "\n\thouse" +
@@ -61,28 +73,35 @@ function techie () {
     
         function processInput(input){
             if (input.toLowerCase() === "stage_right") {
-                stageRight();
+                stageRightTechie();
             } 
             else if (input.toLowerCase() === "house") {
-                house();
+                houseTechie();
             }
             else if (input.toLowerCase() === "catwalks") {
-                catwalks();
+                catwalksTechie();
             }
             else if (input.toLowerCase() === "downstairs") {
-                downstairs();
+                downstairsTechie();
             }
             else {
                 stayHere();
-                waitThenCall(wellsRight);
+                waitThenCall(wellsRightTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function stageRight() {
+    function stageRightTechie() {
        clear();
+       minutes = minutes + 1;
        print("\nYou are in Stage Right!");
+       if (minutes < 10) {
+        print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+       }
+       if (minutes >= 10) {
+        print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+       }
        print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tflys" +
             "\n\tstage" +
@@ -90,23 +109,23 @@ function techie () {
     
         function processInput(input){
           if (input.toLowerCase() === "wells_right") {
-            wellsRight();
+            wellsRightTechie();
             }
             else if (input.toLowerCase() === "stage") {
-                stage();
+                stageTechie();
             }
             else if (input.toLowerCase() === "flys") {
-                flys();
+                flysTechie();
             }
             else {
                 stayHere();
-                waitThenCall(stageRight);
+                waitThenCall(stageRightTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function flys() {
+    function flysTechie() {
         clear();
         print("\nYou are in the Flys!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -114,17 +133,17 @@ function techie () {
     
         function processInput(input){
             if (input.toLowerCase() === "stage_right") {
-                stageRight();
+                stageRightTechie();
             } 
             else {
                 stayHere();
-                waitThenCall(flys);
+                waitThenCall(flysTechie);
             }
         }
         waitForInput(processInput);
     }
 
-function catwalks() {
+function catwalksTechie() {
         clear();
         print("\nYou are in the Catwalks!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -132,17 +151,17 @@ function catwalks() {
     
         function processInput(input){
             if (input.toLowerCase() === "wells_right") {
-                wellsRight();
+                wellsRightTechie();
             } 
             else {
                 stayHere();
-                waitThenCall(catwalks);
+                waitThenCall(catwalksTechie);
             }   
         }
             waitForInput(processInput);
     }
 
-    function house() {
+    function houseTechie() {
         clear();
         print("\nYou are in the House!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -152,49 +171,49 @@ function catwalks() {
     
         function processInput(input){
             if (input.toLowerCase() === "wells_right") {
-                wellsRight();
+                wellsRightTechie();
             } 
            else if (input.toLowerCase() === "wells_left") {
-                wellsLeft();
+                wellsLeftTechie();
             }
             else if (input.toLowerCase() === "stage") {
-                stage();
+                stageTechie();
             }
             else {
                 stayHere();
-                waitThenCall(house);
+                waitThenCall(houseTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function stage() {
+    function stageTechie() {
         clear();
         print("\nYou are on the Stage!");
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\twells_right" +
-            "\n\twells_left" +
+            "\n\tstage_right" +
+            "\n\tstage_left" +
             "\n\thouse");
     
        function processInput(input){
             if (input.toLowerCase() === "wells_right") {
-                wellsRight();
+                stageRightTechie();
             } 
             else if (input.toLowerCase() === "wells_left") {
-                wellsLeft();
+                stageLeftTechie();
             }
             else if (input.toLowerCase() === "house") {
-               house();
+               houseTechie();
             }   
             else {
                 stayHere();
-                waitThenCall(stage);
+                waitThenCall(stageTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function wellsLeft() {
+    function wellsLeftTechie() {
         clear();
         print("\nYou are in the Left Wells!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -203,20 +222,20 @@ function catwalks() {
     
         function processInput(input){
             if (input.toLowerCase() === "stage_left") {
-                stageLeft();
+                stageLeftTechie();
             } 
             else if (input.toLowerCase() === "downstairs") {
-                downstairs();
+                downstairsTechie();
             }
             else {
                stayHere();
-               waitThenCall(wellsLeft);
+               waitThenCall(wellsLeftTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function stageLeft() {
+    function stageLeftTechie() {
         clear();
         print("\nYou are in Stage Right!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -225,20 +244,20 @@ function catwalks() {
     
         function processInput(input){
             if (input.toLowerCase() === "wells_left") {
-                wellsLeft();
+                wellsLeftTechie();
             } 
             else if (input.toLowerCase() === "stage") {
-                stage();
+                stageTechie();
             }
             else {
                 stayHere();
-                waitThenCall(stageLeft);
+                waitThenCall(stageLeftTechie);
             }
         }
         waitForInput(processInput);
     }
 
-    function downstairs() {
+    function downstairsTechie() {
         clear();
         print("\nYou are Downstairs!");
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -247,14 +266,14 @@ function catwalks() {
     
         function processInput(input){
             if (input.toLowerCase() === "wells_left") {
-                wellsLeft();
+                wellsLeftTechie();
             } 
             else if (input.toLowerCase() === "wells_right") {
-                wellsRight();
+                wellsRightTechie();
             }
             else {
                 stayHere();
-                waitThenCall(downstairs);
+                waitThenCall(downstairsTechie);
             }
         }
         waitForInput(processInput);
