@@ -61,10 +61,10 @@ function techie () {
         print("\nYou are in the Right Wells! You see a few actors and techies milling about.");
         if (minutes < 10) {
             print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
-           }
+        }
            if (minutes >= 10) {
             print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
-           }
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right" +
             "\n\thouse" +
@@ -93,15 +93,15 @@ function techie () {
     }
 
     function stageRightTechie() {
-       clear();
-       minutes = minutes + 1;
-       print("\nYou are in Stage Right!");
-       if (minutes < 10) {
-        print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
-       }
-       if (minutes >= 10) {
-        print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
-       }
+        clear();
+        minutes = minutes + 1;
+        print("\nYou are in Stage Right!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+           }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
        print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tflys" +
             "\n\tstage" +
@@ -127,7 +127,14 @@ function techie () {
 
     function flysTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are in the Flys!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right");
     
@@ -145,7 +152,14 @@ function techie () {
 
 function catwalksTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are in the Catwalks!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right");
     
@@ -163,7 +177,14 @@ function catwalksTechie() {
 
     function houseTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are in the House!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right" +
             "\n\twells_left" +
@@ -189,17 +210,24 @@ function catwalksTechie() {
 
     function stageTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are on the Stage!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right" +
             "\n\tstage_left" +
             "\n\thouse");
     
        function processInput(input){
-            if (input.toLowerCase() === "wells_right") {
+            if (input.toLowerCase() === "stage_right") {
                 stageRightTechie();
             } 
-            else if (input.toLowerCase() === "wells_left") {
+            else if (input.toLowerCase() === "stage_left") {
                 stageLeftTechie();
             }
             else if (input.toLowerCase() === "house") {
@@ -215,7 +243,14 @@ function catwalksTechie() {
 
     function wellsLeftTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are in the Left Wells!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_left" +
             "\n\tdownstairs");
@@ -237,7 +272,14 @@ function catwalksTechie() {
 
     function stageLeftTechie() {
         clear();
-        print("\nYou are in Stage Right!");
+        minutes = minutes + 1;
+        print("\nYou are in Stage Left!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage" +
             "\n\twells_left");
@@ -259,7 +301,14 @@ function catwalksTechie() {
 
     function downstairsTechie() {
         clear();
+        minutes = minutes + 1;
         print("\nYou are Downstairs!");
+        if (minutes < 10) {
+            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
+        if (minutes >= 10) {
+            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells_right" +
             "\n\twells_left");
