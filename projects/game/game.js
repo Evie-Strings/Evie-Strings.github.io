@@ -20,14 +20,14 @@ function timeCountdown () {
         if (minutes < 10) {
             print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         }
-           else if (minutes >= 10) {
+        else if (minutes >= 10) {
             print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         }
 }
 
 function chooseCharacter () {
     clear();
-    print("\nIn this game you will play as a high school theater student getting everything ready for opening night.");
+    print('\nIn this game you will play as a high school theater student getting everything ready for opening night.');
     print("\nWho do you want to play as:" +
         "\n\tactor" +
         "\n\ttechie")
@@ -49,6 +49,46 @@ function chooseCharacter () {
 function techie () { 
     clear();
     outsideTechie();
+
+    function gameEndTechie () {
+        if (gaffTapeDelivered == true && lightBoardOn == true && setForTopOfShow == true && chatWithFriend == true) {
+            print("That's all you needed to get done! Head back to stage right for the show to start.");
+        }
+        else if (minutes == 60 && gaffTapeDelivered == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, but a bunch of wires come undone backstage. Unfortunately, nobody can find the gaff tape required to fix them, and several actors trip. Their choreography looks a little strange that night, but hopefully no one in the audience noticed.");
+        }
+        else if (minutes == 60 && lightBoardOn == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nOr, it would be, but we have to get the light board running and cues ready to go. It's crazy that someone missed this! As it is, the show is delayed 5 minutes.");
+        }
+        else if (minutes == 60 && setForTopOfShow == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe crew has to rush putting the set pieces where they go with all the audience in the theater. Predictably, they miss a couple, and several set changes drag on for a long time while everyone talks over headset about what they're going to do." + 
+                 "Not a great opening night, that's for sure.");
+        }
+        else if (minutes == 60 && chatWithFriend == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, nothing wrong, but you really wish you had gotten a chance to talk to your bestie. Maybe tomorrow.");
+        }
+    }
+
+    function winGame () {
+        if (gaffTapeDelivered == true && lightBoardOn == true && setForTopOfShow == true && chatWithFriend == true) {
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("The show goes perfectly, no hiccups, no missed lines or cues, and no fighting backstage. You leave the theater ready to do it again tomorrow.");
+            gameActive = false;
+        }
+    }
     
     function outsideTechie() {
         clear();
@@ -99,6 +139,8 @@ function techie () {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function stageRightTechie() {
@@ -127,6 +169,8 @@ function techie () {
             }
         }
         waitForInput(processInput);
+
+        winGame();
     }
 
     function flysTechie() {
@@ -134,7 +178,7 @@ function techie () {
         print("\nYou are in the Flys!");
         timeCountdown ();
         if (gaffTapeFound == false) {
-         print("You come up to the flys to find your friend. They're nowhere to be found, but you find do a roll of gaff tape." +
+            print("You come up to the flys to find your friend. They're nowhere to be found, but you do find do a roll of gaff tape." +
                 "\nWhat's this doing here? I'd better get this to the sound board!");
             timeCountdown ();
             gaffTapeFound = true;
@@ -155,6 +199,8 @@ function techie () {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
 function catwalksTechie() {
@@ -164,12 +210,15 @@ function catwalksTechie() {
         if (minutes <= 15) {
             print("The door is locked right now. Maybe if you come back later...");
         }
+        else if (lightBoardOn == true) {
+            print("There's not much up here.");
+        }
         else if (minutes > 15 && lightBoardOn == false) {
             print("\nYou walk over to the light board and realize it's not turned on." + 
                 "\nThat's an easy fix!" +
                 "\nYou turn on the lightboard and go to cue 1."); 
-                timeCountdown ();
-                lightboardOn = true;
+            timeCountdown ();
+            lightBoardOn = true;
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells right");
@@ -183,7 +232,9 @@ function catwalksTechie() {
                 waitThenCall(catwalksTechie);
             }   
         }
-            waitForInput(processInput);
+        waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function houseTechie() {
@@ -219,6 +270,8 @@ function catwalksTechie() {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function stageTechie() {
@@ -260,6 +313,8 @@ function catwalksTechie() {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function wellsLeftTechie() {
@@ -284,6 +339,8 @@ function catwalksTechie() {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function stageLeftTechie() {
@@ -293,7 +350,7 @@ function catwalksTechie() {
         if (chatWithFriend == false) {
             print("You walk over and see your friend checking their cue sheet. The two of you get into a lengthy conversation about your web design class.");
             chatWithFriend = true;
-            minutes = minutes + 25;
+            minutes = minutes + 20;
             if (minutes < 10) {
                 print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
             }
@@ -321,6 +378,8 @@ function catwalksTechie() {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 
     function downstairsTechie() {
@@ -345,6 +404,8 @@ function catwalksTechie() {
             }
         }
         waitForInput(processInput);
+
+        gameEndTechie();
     }
 }
 
