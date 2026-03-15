@@ -104,6 +104,7 @@ function techie () {
     function stageRightTechie() {
         clear();
         print("\nYou are in Stage Right!");
+        print("You see your Stage Manager passing out headsets and a group of kids play some sort of card game on the floor. It looks like they're gambling, it's probably best if you don't get involved");
         timeCountdown ();
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tflys" +
@@ -265,6 +266,7 @@ function catwalksTechie() {
         clear();
         print("\nYou are in the Left Wells!");
         timeCountdown ();
+        print("\nThere's not much here.");
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage left" +
             "\n\tdownstairs");
@@ -291,7 +293,7 @@ function catwalksTechie() {
         if (chatWithFriend == false) {
             print("You walk over and see your friend checking their cue sheet. The two of you get into a lengthy conversation about your web design class.");
             chatWithFriend = true;
-            minutes = minutes + 15;
+            minutes = minutes + 25;
             if (minutes < 10) {
                 print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
             }
@@ -325,6 +327,7 @@ function catwalksTechie() {
         clear();
         print("\nYou are Downstairs!");
         timeCountdown ();
+        print("\nYou see groups of actors running around, stashing props, putting on makeup, and chatting. It doesn't look like you're needed down here.");
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\twells right" +
             "\n\twells left");
