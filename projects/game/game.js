@@ -49,7 +49,7 @@ function chooseCharacter () {
 function techie () { 
     clear();
     outsideTechie();
-
+    
     function outsideTechie() {
         clear();
         print("\nYou are Outside the theater!" + 
@@ -132,10 +132,15 @@ function techie () {
         clear();
         print("\nYou are in the Flys!");
         timeCountdown ();
-        print("You come up to the flys to find your friend. They're nowhere to be found, but you find do a roll of gaff tape." +
-            "\nWhat's this doing here? I'd better get this to the sound board!");
-        gaffTapeFound = true;
-        timeCountdown ();
+        if (gaffTapeFound == false) {
+         print("You come up to the flys to find your friend. They're nowhere to be found, but you find do a roll of gaff tape." +
+                "\nWhat's this doing here? I'd better get this to the sound board!");
+            timeCountdown ();
+            gaffTapeFound = true;
+         }
+         else if (gaffTapeFound == true) {
+            print("There's not much up here.")
+         }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right");
     
@@ -158,7 +163,7 @@ function catwalksTechie() {
         if (minutes <= 15) {
             print("The door is locked right now. Maybe if you come back later...");
         }
-        else {
+        else if (minutes > 15 && lightBoardOn == false) {
             print("\nYou walk over to the light board and realize it's not turned on." + 
                 "\nThat's an easy fix!" +
                 "\nYou turn on the lightboard and go to cue 1."); 
@@ -184,12 +189,12 @@ function catwalksTechie() {
         clear();
         print("\nYou are in the House!");
         timeCountdown ();
-         if (gaffTapeFound = true) {
+        if (gaffTapeFound == true && gaffTapeDelivered == false) {
             print("\nYou walk through the house. You see the leads lined up at the sound board to get their mics on. You walk over and put the roll of gaff tape on the sound board and greet the sound techie sitting there.");
             gaffTapeDelivered = true;
             timeCountdown ();
         }
-        else if (gaffTapeFound = false) {
+        else if (gaffTapeFound == false || gaffTapeDelivered == true) {
             print("\nYou walk through the house. You see a group of actors chatting in the seats and some front of house kids running between the house and the lobby.");
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
@@ -219,14 +224,19 @@ function catwalksTechie() {
         clear();
         print("\nYou are on the Stage!");
         timeCountdown ();
-        print("You walk out on stage and se that all the set pieces are still behind the midstage traveller. You take a few minutes to put all the set pieces where they go for the show.");
-        setForTopOfShow = true;
-        minutes = minutes + 10;
-        if (minutes < 10) {
-            print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        if (setForTopOfShow == false) {
+            print("You walk out on stage and see that all the set pieces are still behind the midstage traveller. You take a few minutes to put all the set pieces where they go for the show.");
+            setForTopOfShow = true;
+            minutes = minutes + 10;
+            if (minutes < 10) {
+                print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+            else if (minutes >= 10) {
+                print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
         }
-           else if (minutes >= 10) {
-            print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        else {
+            print("The actors are doing mic check right now. Probably best to get out of their way.")
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage_right" +
@@ -281,6 +291,9 @@ function catwalksTechie() {
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage" +
             "\n\twells_left");
+        if (chatWithFriend = false) {
+            print("You walk over and see your friend ");
+        }
     
         function processInput(input){
             if (input.toLowerCase() === "wells_left") {
