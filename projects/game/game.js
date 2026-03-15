@@ -56,10 +56,10 @@ function techie () {
             "\nIt is a beautiful spring day and you have a performance tonight. As a techie, it's your job to set for the top of show, find and deliver a roll of gaff tape, chat with your friend(because of course), and turn on the light board.");
         print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
         print("\nDo you want to enter the theater? Type where you want to go:" +
-            "\n\twells_right");
+            "\n\twells right");
     
         function processInput(input){
-            if (input.toLowerCase() === "wells_right") {
+            if (input.toLowerCase() === "wells right") {
                 wellsRightTechie();
             } 
             else {
@@ -75,13 +75,13 @@ function techie () {
         print("\nYou are in the Right Wells! You see a few actors and techies milling about.");
         timeCountdown ();
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\tstage_right" +
+            "\n\tstage right" +
             "\n\thouse" +
             "\n\tcatwalks" +
             "\n\tdownstairs");
     
         function processInput(input){
-            if (input.toLowerCase() === "stage_right") {
+            if (input.toLowerCase() === "stage right") {
                 stageRightTechie();
             } 
             else if (input.toLowerCase() === "house") {
@@ -108,10 +108,10 @@ function techie () {
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tflys" +
             "\n\tstage" +
-            "\n\twells_right");
+            "\n\twells right");
     
         function processInput(input){
-          if (input.toLowerCase() === "wells_right") {
+          if (input.toLowerCase() === "wells right") {
             wellsRightTechie();
             }
             else if (input.toLowerCase() === "stage") {
@@ -142,10 +142,10 @@ function techie () {
             print("There's not much up here.")
          }
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\tstage_right");
+            "\n\tstage right");
     
         function processInput(input){
-            if (input.toLowerCase() === "stage_right") {
+            if (input.toLowerCase() === "stage right") {
                 stageRightTechie();
             } 
             else {
@@ -171,10 +171,10 @@ function catwalksTechie() {
                 lightboardOn = true;
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\twells_right");
+            "\n\twells right");
     
         function processInput(input){
-            if (input.toLowerCase() === "wells_right") {
+            if (input.toLowerCase() === "wells right") {
                 wellsRightTechie();
             } 
             else {
@@ -198,15 +198,15 @@ function catwalksTechie() {
             print("\nYou walk through the house. You see a group of actors chatting in the seats and some front of house kids running between the house and the lobby.");
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\twells_right" +
-            "\n\twells_left" +
+            "\n\twells right" +
+            "\n\twells left" +
             "\n\tstage");
     
         function processInput(input){
-            if (input.toLowerCase() === "wells_right") {
+            if (input.toLowerCase() === "wells right") {
                 wellsRightTechie();
             } 
-           else if (input.toLowerCase() === "wells_left") {
+           else if (input.toLowerCase() === "wells left") {
                 wellsLeftTechie();
             }
             else if (input.toLowerCase() === "stage") {
@@ -239,15 +239,15 @@ function catwalksTechie() {
             print("The actors are doing mic check right now. Probably best to get out of their way.")
         }
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\tstage_right" +
-            "\n\tstage_left" +
+            "\n\tstage right" +
+            "\n\tstage left" +
             "\n\thouse");
     
        function processInput(input){
-            if (input.toLowerCase() === "stage_right") {
+            if (input.toLowerCase() === "stage right") {
                 stageRightTechie();
             } 
-            else if (input.toLowerCase() === "stage_left") {
+            else if (input.toLowerCase() === "stage left") {
                 stageLeftTechie();
             }
             else if (input.toLowerCase() === "house") {
@@ -266,11 +266,11 @@ function catwalksTechie() {
         print("\nYou are in the Left Wells!");
         timeCountdown ();
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\tstage_left" +
+            "\n\tstage left" +
             "\n\tdownstairs");
     
         function processInput(input){
-            if (input.toLowerCase() === "stage_left") {
+            if (input.toLowerCase() === "stage left") {
                 stageLeftTechie();
             } 
             else if (input.toLowerCase() === "downstairs") {
@@ -288,15 +288,26 @@ function catwalksTechie() {
         clear();
         print("\nYou are in Stage Left!");
         timeCountdown ();
+        if (chatWithFriend == false) {
+            print("You walk over and see your friend checking their cue sheet. The two of you get into a lengthy conversation about your web design class.");
+            chatWithFriend = true;
+            minutes = minutes + 15;
+            if (minutes < 10) {
+                print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+            else if (minutes >= 10) {
+                print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+        }
+        else {
+            print("You get jumpscared by Munchkin #5, who runs away cackling. It might be best to find another place to sit.")
+        }
+
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage" +
-            "\n\twells_left");
-        if (chatWithFriend = false) {
-            print("You walk over and see your friend ");
-        }
-    
+            "\n\twells left");
         function processInput(input){
-            if (input.toLowerCase() === "wells_left") {
+            if (input.toLowerCase() === "wells left") {
                 wellsLeftTechie();
             } 
             else if (input.toLowerCase() === "stage") {
@@ -315,14 +326,14 @@ function catwalksTechie() {
         print("\nYou are Downstairs!");
         timeCountdown ();
         print("\nWhere do you want to go next? Type where you want to go:" +
-            "\n\twells_right" +
-            "\n\twells_left");
+            "\n\twells right" +
+            "\n\twells left");
     
         function processInput(input){
-            if (input.toLowerCase() === "wells_left") {
+            if (input.toLowerCase() === "wells left") {
                 wellsLeftTechie();
             } 
-            else if (input.toLowerCase() === "wells_right") {
+            else if (input.toLowerCase() === "wells right") {
                 wellsRightTechie();
             }
             else {
