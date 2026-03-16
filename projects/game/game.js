@@ -7,6 +7,13 @@ let gaffTapeDelivered = false;
 let setForTopOfShow = false;
 let chatWithFriend = false;
 
+let propFound = false;
+let propDelivered = false;
+let costumeOn = false;
+let micOn = false;
+let micChecked = false;
+
+
 //Declare your other global variables here
 
 
@@ -46,6 +53,377 @@ function chooseCharacter () {
         }
         waitForInput(processInput);
 }
+function actor () { 
+    clear();
+    outsideActor();
+
+    function gameEndActor () {
+        if (gaffTapeDelivered == true && lightBoardOn == true && setForTopOfShow == true && chatWithFriend == true) {
+            print("That's all you needed to get done! Head back to stage right for the show to start.");
+        }
+        else if (minutes == 60 && propDelivered == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, but a prop is missing from Stage Left. That scene looks a little strange that night, but hopefully no one in the audience noticed.");
+        }
+        else if (minutes == 60 && micOn == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, but the sound is all messed up for the parts you're in. Next time you'll remember to get your mic checked.");
+        }
+        else if (minutes == 60 && costumeOn == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, but you come onstage with one shoe on the worng foot and your shirt inside out. Hey, maybe you can play it off as a quirk of your character?");
+        }
+        else if (minutes == 60 && chatWithFriend == false) {
+            gameActive = false;
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("\nThe show goes fine, nothing wrong, but you really wish you had gotten a chance to talk to your bestie. Maybe tomorrow.");
+        }
+    }
+
+    function winGameActor () {
+        if (propDelivered == true && costumeOn == true && micChecked == true && chatWithFriend == true) {
+            clear();
+            print("\nIt is 7:00. The show is starting.");
+            print("The show goes perfectly, no hiccups, no missed lines or cues, and no fighting backstage. You leave the theater ready to do it again tomorrow.");
+            gameActive = false;
+        }
+    }
+    
+    function outsideActor() {
+        clear();
+        print("\nYou are Outside the theater!" + 
+            "\nIt is a beautiful spring day and you have a performance tonight. As an actor, it's your job to find a prop and put it on Stage Left, get into costume, chat with your friend(because of course), and get into mics.");
+        print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+        print("\nDo you want to enter the theater? Type where you want to go:" +
+            "\n\twells right");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "wells right") {
+                wellsRightActor();
+            } 
+            else {
+                stayHere();
+                waitThenCall(outsideActor);
+            }
+        }
+        waitForInput(processInput);
+    }
+
+    function wellsRightActor() {
+        clear();
+        print("\nYou are in the Right Wells! You see a few actors and techies milling about.");
+        timeCountdown ();
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage right" +
+            "\n\thouse" +
+            "\n\tcatwalks" +
+            "\n\tdownstairs");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "stage right") {
+                stageRightActor();
+            } 
+            else if (input.toLowerCase() === "house") {
+                houseActor();
+            }
+            else if (input.toLowerCase() === "catwalks") {
+                catwalksActor();
+            }
+            else if (input.toLowerCase() === "downstairs") {
+                downstairsActor();
+            }
+            else {
+                stayHere();
+                waitThenCall(wellsRightActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function stageRightActor() {
+        clear();
+        print("\nYou are in Stage Right!");
+        if (prop1Found == false) {
+            print("While walking through the backstage area you notice one of your props sitting on the floor. You should probably take this with you.")
+        }
+        else {
+            print("You see your Stage Manager passing out headsets and a group of kids play some sort of card game on the floor. It looks like they're gambling, it's probably best if you don't get involved");
+        }
+        timeCountdown ();
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tflys" +
+            "\n\tstage" +
+            "\n\twells right");
+    
+        function processInput(input){
+          if (input.toLowerCase() === "wells right") {
+            wellsRightActor();
+            }
+            else if (input.toLowerCase() === "stage") {
+                stageActor();
+            }
+            else if (input.toLowerCase() === "flys") {
+                flysActor();
+            }
+            else {
+                stayHere();
+                waitThenCall(stageRightActor);
+            }
+        }
+        waitForInput(processInput);
+
+        winGameActor();
+    }
+
+    function flysActor() {
+        clear();
+        print("\nYou are in the Flys!");
+        print("There's not much up here.")
+        timeCountdown ();
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage right");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "stage right") {
+                stageRightActor();
+            } 
+            else {
+                stayHere();
+                waitThenCall(flysActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+function catwalksActor() {
+        clear();
+        print("\nYou are in the Catwalks!");
+        timeCountdown ();
+        if (minutes <= 15) {
+            print("The door is locked right now. Maybe if you come back later...");
+        }
+        else if (minutes > 15) {
+            print("There's not much up here.");
+        }
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells right");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "wells right") {
+                wellsRightActor();
+            } 
+            else {
+                stayHere();
+                waitThenCall(catwalksActor);
+            }   
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function houseActor() {
+        clear();
+        print("\nYou are in the House!");
+        timeCountdown ();
+        if (costumeOn == true && micOn == false) {
+            print("\nYou walk through the house. You see the leads lined up at the sound board to get their mics on. You walk over and join the line to get your mic on.");
+            micOn = true;
+            minutes = minutes + 5;
+            if (minutes < 10) {
+                print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+            else if (minutes >= 10) {
+                print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+        }
+        else if (costumeOn == false || micOn == true) {
+            print("\nYou walk through the house. You see some of the actors chatting in the seats and some front of house kids running between the house and the lobby.");
+        }
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells right" +
+            "\n\twells left" +
+            "\n\tstage");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "wells right") {
+                wellsRightActor();
+            } 
+           else if (input.toLowerCase() === "wells left") {
+                wellsLeftActor();
+            }
+            else if (input.toLowerCase() === "stage") {
+                stageActor();
+            }
+            else {
+                stayHere();
+                waitThenCall(houseActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function stageActor() {
+        clear();
+        print("\nYou are on the Stage!");
+        timeCountdown ();
+        if (micOn == false || micChecked == false) {
+            print("You walk out on stage and see a few techies moving set pieces. It's probably best to find somewhere else to be so you don't get hit.");
+        }
+        else if (micOn == true && micChecked == false) {
+            print("A few other actors are doing mic check right now. You wait until it's your turn and sing 'Let it Go' for your mic check.")
+            minutes = minutes + 10;
+            if (minutes < 10) {
+                print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+            else if (minutes >= 10) {
+                print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+        }
+
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage right" +
+            "\n\tstage left" +
+            "\n\thouse");
+    
+       function processInput(input){
+            if (input.toLowerCase() === "stage right") {
+                stageRightActor();
+            } 
+            else if (input.toLowerCase() === "stage left") {
+                stageLeftActor();
+            }
+            else if (input.toLowerCase() === "house") {
+               houseActor();
+            }   
+            else {
+                stayHere();
+                waitThenCall(stageActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function wellsLeftActor() {
+        clear();
+        print("\nYou are in the Left Wells!");
+        timeCountdown ();
+        if (prop1Found == true) {
+            print("You set your props down on the table and reorganize some of the other props that aren't in the correct places");
+            propDelivered = true;
+        }
+        else {
+            print("There's a table with a few props sitting on it. You should go find your props soon.")
+        }
+        print("\nThere's not much here.");
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage left" +
+            "\n\tdownstairs");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "stage left") {
+                stageLeftActor();
+            } 
+            else if (input.toLowerCase() === "downstairs") {
+                downstairsActor();
+            }
+            else {
+               stayHere();
+               waitThenCall(wellsLeftActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function stageLeftActor() {
+        clear();
+        print("\nYou are in Stage Left!");
+        timeCountdown ();
+        if (chatWithFriend == false) {
+            print("You're checking your props and see your friend checking their cue sheet. The two of you get into a lengthy conversation about their web design class.");
+            chatWithFriend = true;
+            minutes = minutes + 20;
+            if (minutes < 10) {
+                print("\nIt is 6:0" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+            else if (minutes >= 10) {
+                print("\nIt is 6:" + (0+minutes) + ". The show starts in " + (60 - minutes) + " minutes");
+            }
+        }
+        else {
+            print("You get jumpscared by Rupert, who runs away cackling. It might be best to find another place to sit.")
+        }
+
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\tstage" +
+            "\n\twells left");
+        function processInput(input){
+            if (input.toLowerCase() === "wells left") {
+                wellsLeftActor();
+            } 
+            else if (input.toLowerCase() === "stage") {
+                stageActor();
+            }
+            else {
+                stayHere();
+                waitThenCall(stageLeftActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+
+    function downstairsActor() {
+        clear();
+        print("\nYou are Downstairs!");
+        timeCountdown ();
+        if (costumeOn == true) {
+            print("\nYou see groups of other actors running around, stashing props, putting on makeup, and chatting. It doesn't look like you're needed down here.");
+        }
+        else if (costumeOn == false) {
+            print("You hurry into your dressing room and find your costume already laid out for. You put it on and thank whatever theater gods are out there that you don't have any quick changes for this show.")
+            costumeOn = true;
+            timeCountdown ();
+        }
+        print("\nWhere do you want to go next? Type where you want to go:" +
+            "\n\twells right" +
+            "\n\twells left");
+    
+        function processInput(input){
+            if (input.toLowerCase() === "wells left") {
+                wellsLeftActor();
+            } 
+            else if (input.toLowerCase() === "wells right") {
+                wellsRightActor();
+            }
+            else {
+                stayHere();
+                waitThenCall(downstairsActor);
+            }
+        }
+        waitForInput(processInput);
+
+        gameEndActor();
+    }
+}
 function techie () { 
     clear();
     outsideTechie();
@@ -81,7 +459,7 @@ function techie () {
         }
     }
 
-    function winGame () {
+    function winGameTechie () {
         if (gaffTapeDelivered == true && lightBoardOn == true && setForTopOfShow == true && chatWithFriend == true) {
             clear();
             print("\nIt is 7:00. The show is starting.");
@@ -170,7 +548,7 @@ function techie () {
         }
         waitForInput(processInput);
 
-        winGame();
+        winGameTechie();
     }
 
     function flysTechie() {
@@ -348,7 +726,7 @@ function catwalksTechie() {
         print("\nYou are in Stage Left!");
         timeCountdown ();
         if (chatWithFriend == false) {
-            print("You walk over and see your friend checking their cue sheet. The two of you get into a lengthy conversation about your web design class.");
+            print("You're checking your cue sheet and see your friend checking their props. The two of you get into a lengthy conversation about your web design class.");
             chatWithFriend = true;
             minutes = minutes + 20;
             if (minutes < 10) {
