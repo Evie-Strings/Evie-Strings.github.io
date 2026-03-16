@@ -430,7 +430,7 @@ function techie () {
 
     function gameEndTechie () {
         if (gaffTapeDelivered == true && lightBoardOn == true && setForTopOfShow == true && chatWithFriend == true) {
-            print("That's all you needed to get done! Head back to stage right for the show to start.");
+            print('<span class="gameEnd">That is all you needed to get done! Head back to stage right for the show to start.</span>');
         }
         else if (minutes == 60 && gaffTapeDelivered == false) {
             gameActive = false;
