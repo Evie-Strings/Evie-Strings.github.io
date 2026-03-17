@@ -152,7 +152,7 @@ function actor () {
     function stageRightActor() {
         clear();
         print("\nYou are in Stage Right!");
-        if (prop1Found == false) {
+        if (propFound == false) {
             print("While walking through the backstage area you notice one of your props sitting on the floor. You should probably take this with you.")
         }
         else {
@@ -323,14 +323,16 @@ function catwalksActor() {
         clear();
         print("\nYou are in the Left Wells!");
         timeCountdown ();
-        if (prop1Found == true) {
+        if (propFound == true) {
             print("You set your props down on the table and reorganize some of the other props that aren't in the correct places");
             propDelivered = true;
         }
-        else {
+        else if (propFound == false) {
             print("There's a table with a few props sitting on it. You should go find your props soon.")
         }
-        print("\nThere's not much here.");
+        else {
+            print("\nThere's not much here.");
+        }
         print("\nWhere do you want to go next? Type where you want to go:" +
             "\n\tstage left" +
             "\n\tdownstairs");
